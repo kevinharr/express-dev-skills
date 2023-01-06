@@ -12,6 +12,8 @@ router.get('/:id', skillsCtrl.show)
 
 router.post('/', skillsCtrl.create)
 
+
+
 export {
   router
 }

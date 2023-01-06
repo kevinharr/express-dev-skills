@@ -18,7 +18,7 @@ function newSkill(req, res) {
 }
 
 function create(req, res) {
-    req.body.done = false
+    req.body.proficient = false
     Skill.create(req.body)
     .then(skill => {
           // Notice we are doing a redirect here!
@@ -33,7 +33,7 @@ function create(req, res) {
   function show(req, res) {
     console.log(req.params.id)
     Skill.findById(req.params.id)
-    .then(todo => {
+    .then(skill => {
       res.render('skills/show', {
         skill: skill
       })

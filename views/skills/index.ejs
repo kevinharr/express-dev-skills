@@ -9,7 +9,7 @@
 <body>
   <h1>Skills</h1>
   <ul>
-    <% skills.forEach(skill => { %>
+    <% skills.forEach(function(skill) { %>
       <li>
 				<a href="/skills/<%= skill._id %>"><%= skill.type %></a>
 				- 
