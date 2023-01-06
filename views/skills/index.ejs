@@ -7,8 +7,17 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>New To-Do</h1>
-  <form action="/skills"
-  
+  <h1>Skills</h1>
+  <ul>
+    <% skills.forEach(skill => { %>
+      <li>
+				<a href="/skills/<%= skill._id %>"><%= skill.type %></a>
+				- 
+				<%= skill.proficient ? 'proficient' : 'not proficient' %>
+        /skills/<%= skill._id %>
+			</li>
+    <% }) %>
+  </ul>
+  <a href="/skills/new">Add Skills</a>
 </body>
 </html>
